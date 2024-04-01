@@ -138,7 +138,7 @@ SUPPORTED_MAJOR="9"
 SUPPORTED_PLATFORM="platform:el$SUPPORTED_MAJOR"
 ARCH=$(arch)
 
-gpg_key_url="https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9"
+gpg_key_url="https://mirror.sjtu.edu.cn/rocky/RPM-GPG-KEY-Rocky-9"
 gpg_key_sha512="ead288baa8daad12d6f340f1a392d47413f8614425673fe310e82d4ead94ca15eb2e1329b30389e6a7f93dd406da255df410306cffd7a1a24f0dfb4c8e23fbfe"
 
 sm_ca_dir=/etc/rhsm/ca
@@ -147,8 +147,8 @@ unset tmp_sm_ca_dir
 # all repos must be signed with the same key given in $gpg_key_url
 declare -A repo_urls
 repo_urls=(
-    [rockybaseos]="https://dl.rockylinux.org/pub/rocky/${SUPPORTED_MAJOR}/BaseOS/$ARCH/os/"
-    [rockyappstream]="https://dl.rockylinux.org/pub/rocky/${SUPPORTED_MAJOR}/AppStream/$ARCH/os/"
+    [rockybaseos]="https://mirror.sjtu.edu.cn/rocky/${SUPPORTED_MAJOR}/BaseOS/$ARCH/os/"
+    [rockyappstream]="https://mirror.sjtu.edu.cn/rocky/${SUPPORTED_MAJOR}/AppStream/$ARCH/os/"
 )
 
 # These are additional packages that should always be installed.
